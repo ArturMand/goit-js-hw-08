@@ -24,7 +24,7 @@ form.addEventListener('submit', e => {
     });
   }
   form.reset();
-  localStorage.clear(LOCALSTORAGE_KEY);
+  localStorage.removeItem(LOCALSTORAGE_KEY);
 });
 
 const loadValueFormAfterReloadPage = key => {

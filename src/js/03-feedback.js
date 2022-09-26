@@ -18,7 +18,6 @@ form.addEventListener(
 form.addEventListener('submit', e => {
   e.preventDefault();
   if (valueInputEmail.value !== '' && valueInputMessage.value !== '') {
-
     console.log({
       email: valueInputEmail.value,
       message: valueInputMessage.value,

@@ -1,8 +1,8 @@
 {
-  "name": "goit-js-hw-08",
+  "name": "goit-js-hw-09",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://arturmand.github.io/goit-js-hw-08/",
+  "homepage": "https://arturmand.github.io/goit-js-hw-08",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /goit-js-hw-08/"
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/ArturMand/goit-js-hw-08.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Artur Mandruk <arturmandryk@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ArturMand/goit-js-hw-08"

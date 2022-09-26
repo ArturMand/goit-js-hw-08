@@ -17,23 +17,28 @@ form.addEventListener(
 
 form.addEventListener('submit', e => {
   e.preventDefault();
+  if (valueInputEmail.value !== '' && valueInputMessage.value !== '') {
+
+    console.log({
+      email: valueInputEmail.value,
+      message: valueInputMessage.value,
+    });
+  }
   form.reset();
   localStorage.clear(LOCALSTORAGE_KEY);
 });
 
 const loadValueFormAfterReloadPage = key => {
-    try {
-  const dataFormStorage = localStorage.getItem(key);
-  return dataFormStorage === null ? undefined : JSON.parse(dataFormStorage);
-} catch (error){
+  try {
+    const dataFormStorage = localStorage.getItem(key);
+    return dataFormStorage === null ? undefined : JSON.parse(dataFormStorage);
+  } catch (error) {
     console.error('Get state error: ', error.message);
-}
+  }
 };
 
-const checkData = loadValueFormAfterReloadPage(LOCALSTORAGE_KEY)
-console.log('~ checkData', checkData)
-if(checkData){
-    valueInputEmail.value = checkData.email;
-    valueInputMessage.value = checkData.message; 
+const checkData = loadValueFormAfterReloadPage(LOCALSTORAGE_KEY);
+if (checkData) {
+  valueInputEmail.value = checkData.email;
+  valueInputMessage.value = checkData.message;
 }
-

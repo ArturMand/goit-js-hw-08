@@ -17,10 +17,12 @@ form.addEventListener(
 
 form.addEventListener('submit', e => {
   e.preventDefault();
-  console.log({
-    email: valueInputEmail.value,
-    message: valueInputMessage.value,
-  });
+  if (valueInputEmail.value !== '' || valueInputMessage.value !== '') {
+    console.log({
+      email: valueInputEmail.value,
+      message: valueInputMessage.value,
+    });
+  }
   form.reset();
   localStorage.removeItem(LOCALSTORAGE_KEY);
 });
